@@ -5,7 +5,9 @@ jobs:
     name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v3
+        with:
+          lfs: true
 
       - name: Install Node.js
         uses: actions/setup-node@v2
@@ -24,7 +26,7 @@ jobs:
       - name: FTP Deploy Locaweb
         uses: locaweb/ftp-deploy@1.0.0
         with:
-          lfs: true
+
           host: ${{ secrets.HOST }}
           user: ${{ secrets.USER }}
           password: ${{ secrets.PASS }}
