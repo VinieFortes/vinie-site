@@ -2,7 +2,7 @@
   <iframe
     src="/PenaltyCup/index.html"
     width="1000"
-    height="660"
+    height="670"
     frameborder="0"
   ></iframe>
 </template>
