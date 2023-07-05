@@ -1,0 +1,30 @@
+name: Deploy via ftp
+on: push
+jobs:
+  deploy:
+    name: Deploy
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+
+      - name: Install Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '14' # Especifique a versão do Node.js que você precisa
+
+      - name: Install Quasar CLI
+        run: npm install -g @quasar/cli
+
+      - name: NPM i
+        run: npm install
+
+      - name: Build Quasar Project
+        run: quasar build
+
+      - name: FTP Deploy Locaweb
+        uses: locaweb/ftp-deploy@1.0.0
+        with:
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.USER }}
+          password: ${{ secrets.PASS }}
+          localDir: "dist/spa"
