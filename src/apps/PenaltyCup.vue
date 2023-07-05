@@ -1,6 +1,6 @@
 <template>
   <iframe
-    src="/HorrorWeb/index.html"
+    src="/PenaltyCup/index.html"
     width="1000"
     height="660"
     frameborder="0"
