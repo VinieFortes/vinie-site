@@ -423,7 +423,7 @@ export default defineComponent({
     const nomePrograma = ref('');
     const iconPrograma = ref('');
     const idPrograma = ref('');
-    const icons = ref([{img:'lixeira.png', nome: 'Lixeira', id: 'lixeira'}, {img: 'computer.png', nome: 'Meu Computador', id: 'meu_computador'}, {img: 'Apps/penaltyCup.png', nome: 'Penalty Cup', id: 'PenaltyCup'}, {img: 'explorer.png', nome: 'Internet Explorer', id: 'internet_explorer'}])
+    const icons = ref([{img:'lixeira.png', nome: 'Lixeira', id: 'lixeira'}, {img: 'computer.png', nome: 'Meu Computador', id: 'meu_computador'}, {img: 'Apps/penaltyCup.png', nome: 'Penalty Cup', id: 'PenaltyCup'}, {img: 'Apps/busaojf.png', nome: 'Busão JF', id: 'BusaoJF'},  {img: 'Apps/busaoRecife.png', nome: 'Busão Recife', id: 'BusaoRecife'},  {img: 'Apps/busaoRibeiraoPreto.png', nome: 'Busão Ribeirão Preto', id: 'BusaoRibeiraoPreto'}])
     const showModal = ref(false);
     const iconSizeVar = ref('52px');
     const appsRunning = ref([]);

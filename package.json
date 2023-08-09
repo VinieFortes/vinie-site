@@ -1,7 +1,7 @@
 {
   "name": "vinie-site",
   "version": "0.0.1",
-  "description": "A Quasar Project",
+  "description": "Vinie.net é um web-site que simula um Sistema Operacional, no qual há apps e jogos disponíveis! como Penalty Cup",
   "productName": "Vinie",
   "author": "vinieFortes <vinie4apps@gmail.com>",
   "private": true,
@@ -15,6 +15,7 @@
     "axios": "^0.21.1",
     "core-js": "^3.6.5",
     "dotenv": "^16.3.1",
+    "html-to-image": "^1.11.11",
     "quasar": "^2.6.0",
     "vue": "^3.0.0",
     "vue-router": "^4.0.0",

@@ -1,5 +1,5 @@
 <template>
-  <div style="min-width: 400px" class="one">
+  <div class="one">
     <div class="mydivheader">
       <div class="menuBar flex row justify-between q-gutter-x-lg items-center">
         <div class="q-gutter-x-sm">
@@ -37,34 +37,37 @@
       </div>
     </div>
     <Lixeira v-if="idPrograma === 'lixeira'"/>
-    <JogoTerror v-if="idPrograma === 'meu_computador'"/>
     <Personalizar @setWallpaper="dadosPersonalizacao" v-if="idPrograma === 'personalizar'"/>
     <usuario v-if="nomePrograma === 'Usuario'"/>
     <busao-j-f v-if="idPrograma === 'BusaoJF'"/>
     <busao-recife v-if="idPrograma === 'BusaoRecife'"/>
     <penalty-cup v-if="idPrograma === 'PenaltyCup'"/>
+    <busao-ribeirao-preto  v-if="idPrograma === 'BusaoRibeiraoPreto'"/>
+    <conversor-img v-if="idPrograma === 'ConvertImg'"/>
   </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
 import Lixeira from "src/apps/Lixeira.vue";
-import JogoTerror from "src/apps/JogoTerror.vue";
 import Personalizar from "src/apps/Personalizar.vue";
 import Usuario from "src/apps/Usuario.vue";
 import BusaoJF from "src/apps/BusaoJF.vue";
 import BusaoRecife from "src/apps/BusaoRecife.vue";
 import PenaltyCup from "src/apps/PenaltyCup.vue";
+import BusaoRibeiraoPreto from "src/apps/BusaoRibeiraoPreto.vue";
+import ConversorImg from "src/apps/ConversorImg.vue";
 
 export default defineComponent({
   components:{
-    JogoTerror,
     Lixeira,
     Personalizar,
     Usuario,
     BusaoJF,
     BusaoRecife,
-    PenaltyCup
+    PenaltyCup,
+    BusaoRibeiraoPreto,
+    ConversorImg
   },
   name: 'Window',
   props: {
@@ -141,6 +144,10 @@ export default defineComponent({
 
         if (newTop >= 0 && newBottom <= screenHeight) {
           parent.style.top = newTop + "px";
+        } else if (newTop < 0) {
+          parent.style.top = "0px";
+        } else if (newBottom > screenHeight) {
+          parent.style.top = screenHeight - parent.offsetHeight + "px";
         }
       }
 
@@ -163,9 +170,12 @@ export default defineComponent({
 
 .one {
   position: absolute;
+  top: 50%;
+  left: 50%;
   z-index: 9;
   background-color: #5b5b5b;
   text-align: center;
+  width: 50%;
   overflow: auto;
   border: var(--main-color) solid 5px;
   border-radius: 12px 12px 12px 12px;
