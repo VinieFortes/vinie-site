@@ -47,7 +47,7 @@ export default defineComponent({
   },
   setup(){
     const dadosObj = ref({wallpaper: null, color: null});
-    const wallpapers = ref(['wallpapers/wall1.png', 'wallpaper2.jpg', 'wallpaper3.jpg', 'wallpaper4.jpg']);
+    const wallpapers = ref(['wallpapers/wall1.png', 'wallpapers/wall2.png', 'wallpaper3.jpg', 'wallpaper4.jpg']);
     const colorsOptions = ref(['#343434','#0054e4', '#66cc00', '#cc0000', '#ff009e', '#ffb002', '#604099']);
     return{
       dadosObj: dadosObj,

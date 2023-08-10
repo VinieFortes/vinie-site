@@ -69,7 +69,7 @@ export default defineComponent({
     }
   },
   setup(){
-    const apps = ref([{img: 'Apps/busaojf.png', nome: 'Busão JF', id: 'BusaoJF'}, {img: 'Apps/busaoRecife.png', nome: 'Busão Recife', id: 'BusaoRefice'}, {img: 'Apps/penaltyCup.png', nome: 'Penalty Cup', id: 'PenaltyCup'}, {img: 'Apps/busaoRibeiraoPreto.png', nome: 'Busão Ribeirão Preto', id: 'BusaoRibeiraoPreto'}, {img: 'Apps/busaoRibeiraoPreto.png', nome: 'Conversor de Imagens', id: 'ConvertImg'}, {img: 'wordpad.png', nome: 'WordPad'}, {img: 'paint.png', nome: 'Paint'}]);
+    const apps = ref([{img: 'Apps/busaojf.png', nome: 'Busão JF', id: 'BusaoJF'}, {img: 'Apps/busaoRecife.png', nome: 'Busão Recife', id: 'BusaoRefice'}, {img: 'Apps/penaltyCup.png', nome: 'Penalty Cup', id: 'PenaltyCup'}, {img: 'Apps/busaoRibeiraoPreto.png', nome: 'Busão Ribeirão Preto', id: 'BusaoRibeiraoPreto'}, {img: 'Apps/conversorImg.png', nome: 'Conversor de Imagens', id: 'ConvertImg'}, {img: 'wordpad.png', nome: 'WordPad'}, {img: 'paint.png', nome: 'Paint'}]);
     const appsPasta = ref([{img: 'pasta.png', nome: 'Meus Documentos', id: 'meus_documentos'}, {img: 'pasta.png', nome: 'Minhas Imagens'}, {img: 'pasta.png', nome: 'Minhas Musicas'}]);
     const appsSystem = ref([{img: 'Apps/conf.png', nome: 'Configurações', id: 'configuracoes'}, {img: 'net.png', nome: 'Redes'}, {img: 'panel.png', nome: 'Painel de Controle'}]);
     const dadosUser = ref({img: 'dog.jpg', nome: ''});
